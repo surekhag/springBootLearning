@@ -39,6 +39,7 @@ public class ProductServiceImpl implements ProductService {
             existing.setName(product.getName());
             existing.setDescription(product.getDescription());
             existing.setPrice(product.getPrice());
+            existing.setExpiryDate(product.getExpiryDate());
             return existing;
         }));
     }

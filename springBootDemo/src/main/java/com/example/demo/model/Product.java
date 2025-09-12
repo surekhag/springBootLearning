@@ -1,20 +1,23 @@
 package com.example.demo.model;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class Product {
     private Long id;
     private String name;
     private String description;
     private BigDecimal price;
+    private LocalDate expiryDate;
 
     public Product() {}
 
-    public Product(Long id, String name, String description, BigDecimal price) {
+    public Product(Long id, String name, String description, BigDecimal price, LocalDate expiryDate) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.expiryDate = expiryDate;
     }
 
     public Long getId() {
@@ -48,4 +51,10 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
-}
+    public LocalDate getExpiryDate() {
+        return expiryDate;
+    }
+    public void setExpiryDate(LocalDate expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+}   
